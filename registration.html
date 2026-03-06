@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Registration Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -20,7 +20,7 @@
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            width: 320px;
+            width: 360px;
         }
 
         h1 {
@@ -48,48 +48,57 @@
             padding: 10px;
             border: none;
             border-radius: 8px;
-            background-color: #2563eb;
+            background-color: #16a34a;
             color: white;
             font-size: 16px;
             cursor: pointer;
         }
 
         button:hover {
-            background-color: #1d4ed8;
+            background-color: #15803d;
         }
 
-        .register-text {
+        .login-text {
             margin-top: 18px;
             text-align: center;
         }
 
-        .register-text a {
+        .login-text a {
             color: #2563eb;
             text-decoration: none;
             font-weight: bold;
         }
 
-        .register-text a:hover {
+        .login-text a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="card">
-        <h1>Login</h1>
+        <h1>Register</h1>
         <form>
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
 
-            <button type="submit">Login</button>
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <button type="submit">Create Account</button>
         </form>
 
-        <p class="register-text">
-            Not registered yet?
-            <a href="registration.html">Register here</a>
+        <p class="login-text">
+            Already registered?
+            <a href="index.html">Back to login</a>
         </p>
     </div>
 </body>
